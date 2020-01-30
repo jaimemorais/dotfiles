@@ -27,5 +27,5 @@ $Shell.BufferSize = $size
 
 
 #Init
-Set-Location D:\SandboxGit\REINF\reinf-codigo
+Set-Location D:\
 Clear-Host
