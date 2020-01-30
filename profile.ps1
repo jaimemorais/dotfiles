@@ -1,9 +1,11 @@
 #Power Shell Profile - Jaime
-#Requirements
+#Install
 #https://github.com/samneirinck/posh-docker
 #https://github.com/dahlbyk/posh-git
 #https://github.com/JanDeDobbeleer/oh-my-posh
-#https://github.com/powerline/fonts/blob/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+#Font 
+#https://github.com/Znuff/consolas-powerline (Consolas NF)
+
 
 #Modules
 Import-Module posh-docker
@@ -25,6 +27,5 @@ $Shell.BufferSize = $size
 
 
 #Init
-Set-Location C:\
+Set-Location D:\SandboxGit\REINF\reinf-codigo
 Clear-Host
- 
