@@ -24,6 +24,8 @@ function Write-Theme {
     $user = $sl.CurrentUser
     $computer = [System.Environment]::MachineName
     $path = Get-FullPath -dir $pwd
+    
+    # To show user name/machine, enable below
     if (Test-NotDefaultUser($user)) {
         $prompt += Write-Prompt -Object "$user@$computer " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
@@ -72,15 +74,18 @@ $sl.PromptSymbols.StartSymbol = ''
 $sl.PromptSymbols.PromptIndicator = [char]::ConvertFromUtf32(0x02C3)
 $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.GitSymbols.BranchIdenticalStatusToSymbol = '='
-$sl.Colors.PromptForegroundColor = [ConsoleColor]::Cyan
-$sl.Colors.PromptBackgroundColor = [ConsoleColor]::Navy
-$sl.Colors.PromptSymbolColor = [ConsoleColor]::White
-$sl.Colors.PromptHighlightColor = [ConsoleColor]::Blue
-$sl.Colors.GitForegroundColor = [ConsoleColor]::White
-$sl.Colors.GitLocalChangesColor = [ConsoleColor]::DarkGreen
-$sl.Colors.SessionInfoBackgroundColor = [ConsoleColor]::Navy
-$sl.Colors.SessionInfoForegroundColor = [ConsoleColor]::White
-$sl.Colors.WithForegroundColor = [ConsoleColor]::DarkRed
-$sl.Colors.WithBackgroundColor = [ConsoleColor]::Magenta
+$sl.Colors.PromptForegroundColor = [System.ConsoleColor]::Cyan
+$sl.Colors.PromptBackgroundColor = [System.ConsoleColor]::Navy
+$sl.Colors.PromptSymbolColor = [System.ConsoleColor]::White
+$sl.Colors.PromptHighlightColor = [System.ConsoleColor]::Blue
+$sl.Colors.GitForegroundColor = [System.ConsoleColor]::White
+$sl.Colors.GitLocalChangesColor = [System.ConsoleColor]::DarkGreen
+$sl.Colors.SessionInfoBackgroundColor = [System.ConsoleColor]::Navy
+$sl.Colors.SessionInfoForegroundColor = [System.ConsoleColor]::White
+$sl.Colors.WithForegroundColor = [System.ConsoleColor]::DarkRed
+$sl.Colors.WithBackgroundColor = [System.ConsoleColor]::Magenta
 $sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::Red
 $sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::White
+
+
+
