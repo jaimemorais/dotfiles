@@ -40,5 +40,5 @@ $host.PrivateData.ErrorForegroundColor = "White"
 
 
 #Init
-Set-Location D:\SandboxGit\REINF\reinf-codigo
+Set-Location D:\
 Clear-Host
