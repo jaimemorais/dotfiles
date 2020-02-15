@@ -31,7 +31,7 @@ $Shell.BufferSize = $size
 
 
 #Set background color
-#$Host.UI.RawUI.BackgroundColor = [rgb]::new(41,35,50)
+#$Host.UI.RawUI.BackgroundColor = [rgb]::new(6,27,62)
 
 
 #Error message colors
