@@ -26,9 +26,9 @@ function Write-Theme {
     $path = Get-FullPath -dir $pwd
     
     # To show user name/machine, enable below
-    if (Test-NotDefaultUser($user)) {
-        $prompt += Write-Prompt -Object "$user@$computer " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
-    }
+    #if (Test-NotDefaultUser($user)) {
+    #    $prompt += Write-Prompt -Object "$user@$computer " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
+    #}
 
     if (Test-VirtualEnv) {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.SegmentForwardSymbol) " -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
@@ -70,22 +70,30 @@ function Write-Theme {
 }
 
 $sl = $global:ThemeSettings #local settings
+
 $sl.PromptSymbols.StartSymbol = ''
+$sl.PromptSymbols.ElevatedSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.PromptSymbols.PromptIndicator = [char]::ConvertFromUtf32(0x02C3)
 $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
-$sl.GitSymbols.BranchIdenticalStatusToSymbol = '='
-$sl.Colors.PromptForegroundColor = [System.ConsoleColor]::Cyan
-$sl.Colors.PromptBackgroundColor = [System.ConsoleColor]::Navy
-$sl.Colors.PromptSymbolColor = [System.ConsoleColor]::White
-$sl.Colors.PromptHighlightColor = [System.ConsoleColor]::Blue
-$sl.Colors.GitForegroundColor = [System.ConsoleColor]::White
-$sl.Colors.GitLocalChangesColor = [System.ConsoleColor]::DarkGreen
-$sl.Colors.SessionInfoBackgroundColor = [System.ConsoleColor]::Navy
-$sl.Colors.SessionInfoForegroundColor = [System.ConsoleColor]::White
-$sl.Colors.WithForegroundColor = [System.ConsoleColor]::DarkRed
-$sl.Colors.WithBackgroundColor = [System.ConsoleColor]::Magenta
-$sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::Red
-$sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::White
 
+$sl.GitSymbols.BranchUntrackedSymbol = [char]::ConvertFromUtf32(0xf192)
+$sl.GitSymbols.BranchIdenticalStatusToSymbol = [char]::ConvertFromUtf32(0x2261)
 
+$sl.Colors.SessionInfoBackgroundColor        = [System.ConsoleColor]::Black
+$sl.Colors.GitDefaultColor                   = [System.ConsoleColor]::Green
+$sl.Colors.PromptForegroundColor             = [System.ConsoleColor]::White
+$sl.Colors.GitLocalChangesColor              = [System.ConsoleColor]::Yellow
+$sl.Colors.VirtualEnvForegroundColor         = [System.ConsoleColor]::White
+$sl.Colors.DriveForegroundColor              = [System.ConsoleColor]::Blue
+$sl.Colors.SessionInfoForegroundColor        = [System.ConsoleColor]::White
+$sl.Colors.PromptHighlightColor              = [System.ConsoleColor]::White
+$sl.Colors.AdminIconForegroundColor          = [System.ConsoleColor]::White
+$sl.Colors.CommandFailedIconForegroundColor  = [System.ConsoleColor]::DarkRed
+$sl.Colors.WithForegroundColor               = [System.ConsoleColor]::White
+$sl.Colors.GitForegroundColor                = [System.ConsoleColor]::Black
+$sl.Colors.PromptSymbolColor                 = [System.ConsoleColor]::Cyan
+$sl.Colors.VirtualEnvBackgroundColor         = [System.ConsoleColor]::Red
+$sl.Colors.WithBackgroundColor               = [System.ConsoleColor]::DarkRed
+$sl.Colors.PromptBackgroundColor             = [System.ConsoleColor]::Blue
+$sl.Colors.GitNoLocalChangesAndAheadColor    = [System.ConsoleColor]::Cyan
 
