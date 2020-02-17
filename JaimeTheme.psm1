@@ -79,9 +79,9 @@ $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.GitSymbols.BranchUntrackedSymbol = [char]::ConvertFromUtf32(0xf192)
 $sl.GitSymbols.BranchIdenticalStatusToSymbol = [char]::ConvertFromUtf32(0x2261)
 
-$sl.Colors.SessionInfoBackgroundColor        = [System.ConsoleColor]::Black
+$sl.Colors.SessionInfoBackgroundColor        = [System.ConsoleColor]::Navy
 $sl.Colors.GitDefaultColor                   = [System.ConsoleColor]::Green
-$sl.Colors.PromptForegroundColor             = [System.ConsoleColor]::White
+$sl.Colors.PromptForegroundColor             = [System.ConsoleColor]::Cyan
 $sl.Colors.GitLocalChangesColor              = [System.ConsoleColor]::Yellow
 $sl.Colors.VirtualEnvForegroundColor         = [System.ConsoleColor]::White
 $sl.Colors.DriveForegroundColor              = [System.ConsoleColor]::Blue
@@ -94,6 +94,6 @@ $sl.Colors.GitForegroundColor                = [System.ConsoleColor]::Black
 $sl.Colors.PromptSymbolColor                 = [System.ConsoleColor]::Cyan
 $sl.Colors.VirtualEnvBackgroundColor         = [System.ConsoleColor]::Red
 $sl.Colors.WithBackgroundColor               = [System.ConsoleColor]::DarkRed
-$sl.Colors.PromptBackgroundColor             = [System.ConsoleColor]::Blue
+$sl.Colors.PromptBackgroundColor             = [System.ConsoleColor]::Navy
 $sl.Colors.GitNoLocalChangesAndAheadColor    = [System.ConsoleColor]::Cyan
 
