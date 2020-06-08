@@ -10,27 +10,25 @@ function Write-Theme {
 
     $lastColor = $sl.Colors.PromptBackgroundColor
     $prompt = Write-Prompt -Object $sl.PromptSymbols.StartSymbol -ForegroundColor $sl.Colors.PromptForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
-    
+
     #check the last command state and indicate if failed
-    if ($lastCommandFailed) {
+    If ($lastCommandFailed) {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.FailedCommandSymbol) " -ForegroundColor $sl.Colors.CommandFailedIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
+    }
+
+    #check for elevated prompt
+    If (Test-Administrator) {
+        $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     }
 
     $user = $sl.CurrentUser
     $computer = [System.Environment]::MachineName
     $path = Get-FullPath -dir $pwd
-
-
-    # To show user/machine name, enable below
-
-    #check for elevated prompt
-    #if (Test-Administrator) {
-    #    $prompt += Write-Prompt -Object "$($sl.PromptSymbols.ElevatedSymbol) " -ForegroundColor $sl.Colors.AdminIconForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
-    #}    
+    
+    # To show user name/machine, enable below
     #if (Test-NotDefaultUser($user)) {
     #    $prompt += Write-Prompt -Object "$user@$computer " -ForegroundColor $sl.Colors.SessionInfoForegroundColor -BackgroundColor $sl.Colors.SessionInfoBackgroundColor
     #}
-
 
     if (Test-VirtualEnv) {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.SegmentForwardSymbol) " -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $sl.Colors.VirtualEnvBackgroundColor
@@ -38,7 +36,7 @@ function Write-Theme {
         $prompt += Write-Prompt -Object "$($sl.PromptSymbols.SegmentForwardSymbol) " -ForegroundColor $sl.Colors.VirtualEnvBackgroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     }
     else {
-        #$prompt += Write-Prompt -Object "$($sl.PromptSymbols.SegmentForwardSymbol) " -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
+        $prompt += Write-Prompt -Object "$($sl.PromptSymbols.SegmentForwardSymbol) " -ForegroundColor $sl.Colors.SessionInfoBackgroundColor -BackgroundColor $sl.Colors.PromptBackgroundColor
     }
 
     # Writes the drive portion
@@ -81,9 +79,9 @@ $sl.PromptSymbols.SegmentForwardSymbol = [char]::ConvertFromUtf32(0xE0B0)
 $sl.GitSymbols.BranchUntrackedSymbol = [char]::ConvertFromUtf32(0xf192)
 $sl.GitSymbols.BranchIdenticalStatusToSymbol = [char]::ConvertFromUtf32(0x2261)
 
-$sl.Colors.SessionInfoBackgroundColor        = [System.ConsoleColor]::Navy
+$sl.Colors.SessionInfoBackgroundColor        = [System.ConsoleColor]::Black
 $sl.Colors.GitDefaultColor                   = [System.ConsoleColor]::Green
-$sl.Colors.PromptForegroundColor             = [System.ConsoleColor]::Cyan
+$sl.Colors.PromptForegroundColor             = [System.ConsoleColor]::White
 $sl.Colors.GitLocalChangesColor              = [System.ConsoleColor]::Yellow
 $sl.Colors.VirtualEnvForegroundColor         = [System.ConsoleColor]::White
 $sl.Colors.DriveForegroundColor              = [System.ConsoleColor]::Blue
@@ -96,5 +94,6 @@ $sl.Colors.GitForegroundColor                = [System.ConsoleColor]::Black
 $sl.Colors.PromptSymbolColor                 = [System.ConsoleColor]::Cyan
 $sl.Colors.VirtualEnvBackgroundColor         = [System.ConsoleColor]::Red
 $sl.Colors.WithBackgroundColor               = [System.ConsoleColor]::DarkRed
-$sl.Colors.PromptBackgroundColor             = [System.ConsoleColor]::Navy
+$sl.Colors.PromptBackgroundColor             = [System.ConsoleColor]::Blue
 $sl.Colors.GitNoLocalChangesAndAheadColor    = [System.ConsoleColor]::Cyan
+
