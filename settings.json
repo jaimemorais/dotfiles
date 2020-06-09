@@ -21,7 +21,7 @@
 
     "initialCols": 180,
     "initialRows": 40,
-    "initialPosition": "160,180",
+    "initialPosition": "140,160",
 
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
@@ -33,33 +33,42 @@
         "defaults":
         {
             "fontFace": "Consolas NF",
-            "fontSize": 11
+            "fontSize": 11,
+            "cursorShape":"vintage"
         },
         "list":
         [
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "PowerShell",
+                "name": "PowerShell",                
                 "source": "Windows.Terminal.PowershellCore",
-                "useAcrylic": true,
+                "useAcrylic": false,
                 "acrylicOpacity" : 0.9,            
-                "background":"#1f3140",
-                "foreground":"#FFFFFF"                
+                "background":"#103040",
+                "foreground":"#FFFFFF",
+                "backgroundImage" : "C:\\Users\\Jaime\\Documents\\bg-powershell.jpg"
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": true
+                "background":"#105070",
+                "foreground":"#FFFFFF",
+                "hidden": false
             },
             {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
                 "hidden": false,
-                "foreground":"#ffffff",
-                "background":"#111111"
+                "fontSize": 15,
+                "foreground":"#44ff44",
+                "background":"#000000",
+                "experimental.retroTerminalEffect":true
+                //"useAcrylic": false,
+                //"acrylicOpacity" : 0.1,            
+                //"backgroundImage" : "C:\\Users\\Jaime\\Documents\\wave.jpg"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
