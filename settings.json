@@ -19,9 +19,9 @@
     // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
 
-    "initialCols": 180,
-    "initialRows": 40,
-    "initialPosition": "130,140",
+    "initialCols": 200,
+    "initialRows": 45,
+    "initialPosition": "130,120",
 
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
