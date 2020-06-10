@@ -64,6 +64,8 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
+                "tabTitle":"cmd",
+                "suppressApplicationTitle":true,    
                 "hidden": false,
                 "fontSize": 15,
                 "foreground":"#44ff44",
