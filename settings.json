@@ -84,7 +84,10 @@
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
-                "name": "Ubuntu-20.04",                
+                "name": "Ubuntu-20.04",    
+				"tabTitle":"Ubuntu-20.04",            
+				"suppressApplicationTitle":true,   
+                "foreground":"#ffeeee",
                 "backgroundImage" : "C:\\Users\\Jaime\\Documents\\bg-ubuntu.jpg",
                 "source": "Windows.Terminal.Wsl"                
             },
@@ -92,6 +95,9 @@
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
                 "name": "Debian",
+				"tabTitle":"Debian",                 
+				"suppressApplicationTitle":true,                       
+				"foreground":"#ffeeee",
 				"backgroundImage" : "C:\\Users\\Jaime\\Documents\\bg-debian.jpg",
                 "source": "Windows.Terminal.Wsl"
             }        
