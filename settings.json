@@ -43,43 +43,14 @@
                 "name": "PowerShell", 
                 "source": "Windows.Terminal.PowershellCore",
                 "hidden": false,
-                "tabTitle":"PowerShell",
+                "tabTitle":"PowerShell Core",
                 "suppressApplicationTitle":true,            
-                "useAcrylic": false,
+                "useAcrylic": false,                
                 "acrylicOpacity" : 0.9,            
                 "background":"#103040",
                 "foreground":"#FFFFFF",
                 "backgroundImage" : "C:\\Users\\Jaime\\Documents\\bg-powershell.jpg",
                 "startingDirectory" : "D:\\Serpro\\SandboxGit\\REINF\\reinf-codigo"
-            },
-            {
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "background":"#105070",
-                "foreground":"#FFFFFF",
-                "hidden": false
-            },
-            {
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "Command Prompt",
-                "commandline": "cmd.exe",
-                "tabTitle":"cmd",
-                "suppressApplicationTitle":true,    
-                "hidden": false,
-                "fontSize": 15,
-                "foreground":"#44ff44",
-                "background":"#000000",
-                "experimental.retroTerminalEffect":true
-                //"useAcrylic": false,
-                //"acrylicOpacity" : 0.1,            
-                //"backgroundImage" : "C:\\Users\\Jaime\\Documents\\wave.jpg"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
             },
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
@@ -100,7 +71,36 @@
 				"foreground":"#ffeeee",
 				"backgroundImage" : "C:\\Users\\Jaime\\Documents\\bg-debian.jpg",
                 "source": "Windows.Terminal.Wsl"
-            }        
+            },                  
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "tabTitle":"cmd",
+                "suppressApplicationTitle":true,    
+                "hidden": false,
+                "fontSize": 14,
+                "foreground":"#44ff44",
+                "background":"#000000",
+                "experimental.retroTerminalEffect":true
+                //"useAcrylic": false,
+                //"acrylicOpacity" : 0.1,            
+                //"backgroundImage" : "C:\\Users\\Jaime\\Documents\\wave.jpg"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "background":"#105070",
+                "foreground":"#FFFFFF",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }  
         ]
     },
 
