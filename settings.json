@@ -43,7 +43,7 @@
                 "name": "PowerShell", 
                 "source": "Windows.Terminal.PowershellCore",
                 "hidden": false,
-                "tabTitle":"PowerShell Core",
+                "tabTitle":"PowerShell 7",
                 "suppressApplicationTitle":true,            
                 "useAcrylic": false,                
                 "acrylicOpacity" : 0.9,            
