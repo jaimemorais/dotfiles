@@ -1,9 +1,9 @@
-#Power Shell Jaime
+#Power Shell Profile - Jaime
 
 #Installing
 #Install-Module -Scope CurrentUser posh-docker
 #Install-Module posh-git -Scope CurrentUser -Force
-#Install-Module oh-my-posh -Scope CurrentUser -Force
+#Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease -Force
 #Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 #Install-Module -Name Communary.ConsoleExtensions
 
