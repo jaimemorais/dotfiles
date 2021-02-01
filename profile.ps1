@@ -1,14 +1,14 @@
 #Power Shell Profile - Jaime
 
 #Installing
-#Install-Module -Scope CurrentUser posh-docker
 #Install-Module posh-git -Scope CurrentUser -Force
+#Install-Module posh-docker -Scope CurrentUser 
 #Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease -Force
 #Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 #Install-Module -Name Communary.ConsoleExtensions
 
 #Font : https://github.com/Znuff/consolas-powerline (Consolas NF)
-#Theme : https://github.com/jaimemorais/personal-env-files/blob/master/JaimeTheme.psm1
+#Theme : https://github.com/jaimemorais/dotfiles/blob/master/JaimeTheme.psm1
 
 
 #Modules
